@@ -1,0 +1,3178 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/Netflix/falcor">falcor (v0.1.17)</a>
+</h1>
+<h4>A JavaScript library for efficient data fetching.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.falcor">module falcor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model">
+            function <span class="apidocSignatureSpan">falcor.</span>Model
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.ModelDataSourceAdapter">
+            function <span class="apidocSignatureSpan">falcor.</span>ModelDataSourceAdapter
+            <span class="apidocSignatureSpan">(model)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.ModelRoot">
+            function <span class="apidocSignatureSpan">falcor.</span>ModelRoot
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Promise">
+            function <span class="apidocSignatureSpan">falcor.</span>Promise
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">falcor.</span>Model.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">falcor.</span>ModelDataSourceAdapter.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">falcor.</span>ModelRoot.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.falcor.Model">module falcor.Model</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.Model">
+            function <span class="apidocSignatureSpan">falcor.</span>Model
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.atom">
+            function <span class="apidocSignatureSpan">falcor.Model.</span>atom
+            <span class="apidocSignatureSpan">(value, props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.error">
+            function <span class="apidocSignatureSpan">falcor.Model.</span>error
+            <span class="apidocSignatureSpan">(errorValue, props)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.pathValue">
+            function <span class="apidocSignatureSpan">falcor.Model.</span>pathValue
+            <span class="apidocSignatureSpan">(path, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.ref">
+            function <span class="apidocSignatureSpan">falcor.Model.</span>ref
+            <span class="apidocSignatureSpan">(path, props)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.falcor.Model.prototype">module falcor.Model.prototype</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_boxed</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_materialized</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_progressive</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_treatErrorsAsValues</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._clone">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_clone
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._dematerialize">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_dematerialize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._derefSync">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_derefSync
+            <span class="apidocSignatureSpan">(boundPathArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._getBoundValue">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getBoundValue
+            <span class="apidocSignatureSpan">(model, pathArg, materialized)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._getPathValuesAsJSONG">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getPathValuesAsJSONG
+            <span class="apidocSignatureSpan">(model, paths, seed)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._getPathValuesAsPathMap">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getPathValuesAsPathMap
+            <span class="apidocSignatureSpan">(model, paths, seed)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._getValueSync">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getValueSync
+            <span class="apidocSignatureSpan">(model, simplePath, noClone)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._getVersion">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getVersion
+            <span class="apidocSignatureSpan">(model, path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._getWithPaths">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getWithPaths
+            <span class="apidocSignatureSpan">(paths)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._invalidatePathMapsAsJSON">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_invalidatePathMapsAsJSON
+            <span class="apidocSignatureSpan">(model, pathMapEnvelopes)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._invalidatePathValuesAsJSON">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_invalidatePathValuesAsJSON
+            <span class="apidocSignatureSpan">(model, paths)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._materialize">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_materialize
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._set">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setCache">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setCache
+            <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setJSONGsAsJSON">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setJSONGsAsJSON
+            <span class="apidocSignatureSpan">(model, jsonGraphEnvelopes, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setJSONGsAsJSONG">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setJSONGsAsJSONG
+            <span class="apidocSignatureSpan">(model, jsonGraphEnvelopes, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setJSONGsAsPathMap">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setJSONGsAsPathMap
+            <span class="apidocSignatureSpan">(model, jsonGraphEnvelopes, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setJSONGsAsValues">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setJSONGsAsValues
+            <span class="apidocSignatureSpan">(model, jsonGraphEnvelopes, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setPathMapsAsJSON">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathMapsAsJSON
+            <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setPathMapsAsJSONG">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathMapsAsJSONG
+            <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setPathMapsAsPathMap">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathMapsAsPathMap
+            <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setPathMapsAsValues">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathMapsAsValues
+            <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setPathValuesAsJSON">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathValuesAsJSON
+            <span class="apidocSignatureSpan">(model, pathValues, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setPathValuesAsJSONG">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathValuesAsJSONG
+            <span class="apidocSignatureSpan">(model, pathValues, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setPathValuesAsPathMap">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathValuesAsPathMap
+            <span class="apidocSignatureSpan">(model, pathValues, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setPathValuesAsValues">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathValuesAsValues
+            <span class="apidocSignatureSpan">(model, pathValues, x, errorSelector, comparator)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._setValueSync">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setValueSync
+            <span class="apidocSignatureSpan">(pathArg, valueArg, errorSelectorArg, comparatorArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype._syncCheck">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_syncCheck
+            <span class="apidocSignatureSpan">(name)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.asDataSource">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>asDataSource
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.batch">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>batch
+            <span class="apidocSignatureSpan">(schedulerOrDelayArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.boxValues">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>boxValues
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.call">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>call
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.deref">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>deref
+            <span class="apidocSignatureSpan">(boundPathArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.get">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>get
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.getCache">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>getCache
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.getPath">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>getPath
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.getValue">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>getValue
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.getVersion">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>getVersion
+            <span class="apidocSignatureSpan">(pathArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.invalidate">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>invalidate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.preload">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>preload
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.set">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>set
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.setCache">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>setCache
+            <span class="apidocSignatureSpan">(cacheOrJSONGraphEnvelope)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.setValue">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>setValue
+            <span class="apidocSignatureSpan">(pathArg, valueArg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.toJSON">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>toJSON
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.treatErrorsAsValues">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>treatErrorsAsValues
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.unbatch">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>unbatch
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.unboxValues">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>unboxValues
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.Model.prototype.withoutDataSource">
+            function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>withoutDataSource
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_collectRatio</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_maxSize</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.falcor.ModelDataSourceAdapter">module falcor.ModelDataSourceAdapter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.ModelDataSourceAdapter.ModelDataSourceAdapter">
+            function <span class="apidocSignatureSpan">falcor.</span>ModelDataSourceAdapter
+            <span class="apidocSignatureSpan">(model)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.falcor.ModelDataSourceAdapter.prototype">module falcor.ModelDataSourceAdapter.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.ModelDataSourceAdapter.prototype.call">
+            function <span class="apidocSignatureSpan">falcor.ModelDataSourceAdapter.prototype.</span>call
+            <span class="apidocSignatureSpan">(path, args, suffixes, paths)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.ModelDataSourceAdapter.prototype.get">
+            function <span class="apidocSignatureSpan">falcor.ModelDataSourceAdapter.prototype.</span>get
+            <span class="apidocSignatureSpan">(pathSets)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.ModelDataSourceAdapter.prototype.set">
+            function <span class="apidocSignatureSpan">falcor.ModelDataSourceAdapter.prototype.</span>set
+            <span class="apidocSignatureSpan">(jsongResponse)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.falcor.ModelRoot">module falcor.ModelRoot</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.ModelRoot.ModelRoot">
+            function <span class="apidocSignatureSpan">falcor.</span>ModelRoot
+            <span class="apidocSignatureSpan">(o)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.falcor.ModelRoot.prototype">module falcor.ModelRoot.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.ModelRoot.prototype.comparator">
+            function <span class="apidocSignatureSpan">falcor.ModelRoot.prototype.</span>comparator
+            <span class="apidocSignatureSpan">(cacheNode, messageNode)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.falcor.ModelRoot.prototype.errorSelector">
+            function <span class="apidocSignatureSpan">falcor.ModelRoot.prototype.</span>errorSelector
+            <span class="apidocSignatureSpan">(x, y)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.falcor" id="apidoc.module.falcor">module falcor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model" id="apidoc.element.falcor.Model">
+        function <span class="apidocSignatureSpan">falcor.</span>Model
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Model(o) {
+
+    var options = o || {};
+    this._root = options._root || new ModelRoot(options);
+    this._path = options.path || options._path || [];
+    this._scheduler = options.scheduler || options._scheduler || new ImmediateScheduler();
+    this._source = options.source || options._source;
+    this._request = options.request || options._request || new RequestQueue(this, this._scheduler);
+    this._ID = ID++;
+
+    if (typeof options.maxSize === "number") {
+        this._maxSize = options.maxSize;
+    } else {
+        this._maxSize = options._maxSize || Model.prototype._maxSize;
+    }
+
+    if (typeof options.collectRatio === "number") {
+        this._collectRatio = options.collectRatio;
+    } else {
+        this._collectRatio = options._collectRatio || Model.prototype._collectRatio;
+    }
+
+    if (options.boxed || options.hasOwnProperty("_boxed")) {
+        this._boxed = options.boxed || options._boxed;
+    }
+
+    if (options.materialized || options.hasOwnProperty("_materialized")) {
+        this._materialized = options.materialized || options._materialized;
+    }
+
+    if (typeof options.treatErrorsAsValues === "boolean") {
+        this._treatErrorsAsValues = options.treatErrorsAsValues;
+    } else if (options.hasOwnProperty("_treatErrorsAsValues")) {
+        this._treatErrorsAsValues = options._treatErrorsAsValues;
+    }
+
+    if (options.cache) {
+        this.setCache(options.cache);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+~~~html
+&lt;!-- index.html --&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- Do _not_  rely on this URL in production. Use only during development.  --&gt;
+    &lt;script src="https://netflix.github.io/falcor/build/falcor.browser.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+var model = new falcor.<span class="apidocCodeKeywordSpan">Model</span>({source: new falcor.HttpDataSource('/model.json'
+;) });
+
+// retrieve the "greeting" key from the root of the Virtual JSON resource
+model.
+  get("greeting").
+  then(function(response) {
+    document.write(response.json.greeting);
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.ModelDataSourceAdapter" id="apidoc.element.falcor.ModelDataSourceAdapter">
+        function <span class="apidocSignatureSpan">falcor.</span>ModelDataSourceAdapter
+        <span class="apidocSignatureSpan">(model)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ModelDataSourceAdapter(model) {
+    this._model = model._materialize().treatErrorsAsValues();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.ModelRoot" id="apidoc.element.falcor.ModelRoot">
+        function <span class="apidocSignatureSpan">falcor.</span>ModelRoot
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ModelRoot(o) {
+
+    var options = o || {};
+
+    this.syncRefCount = 0;
+    this.expired = options.expired || [];
+    this.unsafeMode = options.unsafeMode || false;
+    this.collectionScheduler = options.collectionScheduler || new ImmediateScheduler();
+    this.cache = {};
+
+    if (isFunction(options.comparator)) {
+        this.comparator = options.comparator;
+    }
+
+    if (isFunction(options.errorSelector)) {
+        this.errorSelector = options.errorSelector;
+    }
+
+    if (isFunction(options.onChange)) {
+        this.onChange = options.onChange;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Promise" id="apidoc.element.falcor.Promise">
+        function <span class="apidocSignatureSpan">falcor.</span>Promise
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Promise() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.falcor.Model" id="apidoc.module.falcor.Model">module falcor.Model</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.Model" id="apidoc.element.falcor.Model.Model">
+        function <span class="apidocSignatureSpan">falcor.</span>Model
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Model(o) {
+
+    var options = o || {};
+    this._root = options._root || new ModelRoot(options);
+    this._path = options.path || options._path || [];
+    this._scheduler = options.scheduler || options._scheduler || new ImmediateScheduler();
+    this._source = options.source || options._source;
+    this._request = options.request || options._request || new RequestQueue(this, this._scheduler);
+    this._ID = ID++;
+
+    if (typeof options.maxSize === "number") {
+        this._maxSize = options.maxSize;
+    } else {
+        this._maxSize = options._maxSize || Model.prototype._maxSize;
+    }
+
+    if (typeof options.collectRatio === "number") {
+        this._collectRatio = options.collectRatio;
+    } else {
+        this._collectRatio = options._collectRatio || Model.prototype._collectRatio;
+    }
+
+    if (options.boxed || options.hasOwnProperty("_boxed")) {
+        this._boxed = options.boxed || options._boxed;
+    }
+
+    if (options.materialized || options.hasOwnProperty("_materialized")) {
+        this._materialized = options.materialized || options._materialized;
+    }
+
+    if (typeof options.treatErrorsAsValues === "boolean") {
+        this._treatErrorsAsValues = options.treatErrorsAsValues;
+    } else if (options.hasOwnProperty("_treatErrorsAsValues")) {
+        this._treatErrorsAsValues = options._treatErrorsAsValues;
+    }
+
+    if (options.cache) {
+        this.setCache(options.cache);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+~~~html
+&lt;!-- index.html --&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;!-- Do _not_  rely on this URL in production. Use only during development.  --&gt;
+    &lt;script src="https://netflix.github.io/falcor/build/falcor.browser.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+var model = new falcor.<span class="apidocCodeKeywordSpan">Model</span>({source: new falcor.HttpDataSource('/model.json'
+;) });
+
+// retrieve the "greeting" key from the root of the Virtual JSON resource
+model.
+  get("greeting").
+  then(function(response) {
+    document.write(response.json.greeting);
+  });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.atom" id="apidoc.element.falcor.Model.atom">
+        function <span class="apidocSignatureSpan">falcor.Model.</span>atom
+        <span class="apidocSignatureSpan">(value, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function atom(value, props) {
+    return sentinel("atom", value, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.error" id="apidoc.element.falcor.Model.error">
+        function <span class="apidocSignatureSpan">falcor.Model.</span>error
+        <span class="apidocSignatureSpan">(errorValue, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function error(errorValue, props) {
+    return sentinel("error", errorValue, props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.pathValue" id="apidoc.element.falcor.Model.pathValue">
+        function <span class="apidocSignatureSpan">falcor.Model.</span>pathValue
+        <span class="apidocSignatureSpan">(path, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function pathValue(path, value) {
+    return { path: pathSyntax.fromPath(path), value: value };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.ref" id="apidoc.element.falcor.Model.ref">
+        function <span class="apidocSignatureSpan">falcor.Model.</span>ref
+        <span class="apidocSignatureSpan">(path, props)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ref(path, props) {
+    return sentinel("ref", pathSyntax.fromPath(path), props);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.falcor.Model.prototype" id="apidoc.module.falcor.Model.prototype">module falcor.Model.prototype</a></h1>
+
+
+
+
+
+
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._clone" id="apidoc.element.falcor.Model.prototype._clone">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_clone
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function cloneModel(opts) {
+    var clone = new Model(this);
+    for (var key in opts) {
+        var value = opts[key];
+        if (value === "delete") {
+            delete clone[key];
+        } else {
+            clone[key] = value;
+        }
+    }
+    clone.setCache = void 0;
+    return clone;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._dematerialize" id="apidoc.element.falcor.Model.prototype._dematerialize">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_dematerialize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dematerialize() {
+    return this._clone({
+        _materialized: "delete"
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._derefSync" id="apidoc.element.falcor.Model.prototype._derefSync">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_derefSync
+        <span class="apidocSignatureSpan">(boundPathArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function derefSync(boundPathArg) {
+
+    var boundPath = pathSyntax.fromPath(boundPathArg);
+
+    if (!Array.isArray(boundPath)) {
+        throw new Error("Model#derefSync must be called with an Array path.");
+    }
+
+    var boundValue = getBoundValue(this, this._path.concat(boundPath), false);
+
+    var path = boundValue.path;
+    var node = boundValue.value;
+    var found = boundValue.found;
+
+    // If the node is not found or the node is found but undefined is returned,
+    // this happens when a reference is expired.
+    if (!found || node === undefined ||
+        node.$type === $atom &amp;&amp; node.value === undefined) {
+        return undefined;
+    }
+
+    if (node.$type) {
+        throw new InvalidModelError();
+    }
+
+    return this._clone({ _path: path });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._getBoundValue" id="apidoc.element.falcor.Model.prototype._getBoundValue">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getBoundValue
+        <span class="apidocSignatureSpan">(model, pathArg, materialized)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getBoundValue(model, pathArg, materialized) {
+
+    var path = pathArg;
+    var boundPath = pathArg;
+    var boxed, treatErrorsAsValues,
+        value, shorted, found;
+
+    boxed = model._boxed;
+    materialized = model._materialized;
+    treatErrorsAsValues = model._treatErrorsAsValues;
+
+    model._boxed = true;
+    model._materialized = materialized === undefined || materialized;
+    model._treatErrorsAsValues = true;
+
+    value = getValueSync(model, path.concat(null), true);
+
+    model._boxed = boxed;
+    model._materialized = materialized;
+    model._treatErrorsAsValues = treatErrorsAsValues;
+
+    path = value.optimizedPath;
+    shorted = value.shorted;
+    found = value.found;
+    value = value.value;
+
+    while (path.length &amp;&amp; path[path.length - 1] === null) {
+        path.pop();
+    }
+
+    if (found &amp;&amp; shorted) {
+        throw new InvalidModelError(boundPath, path);
+    }
+
+    return {
+        path: path,
+        value: value,
+        shorted: shorted,
+        found: found
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._getPathValuesAsJSONG" id="apidoc.element.falcor.Model.prototype._getPathValuesAsJSONG">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getPathValuesAsJSONG
+        <span class="apidocSignatureSpan">(model, paths, seed)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function innerGet(model, paths, seed) {
+    var valueNode = seed[0];
+    var results = {
+        values: seed,
+        optimizedPaths: []
+    };
+    var cache = model._root.cache;
+    var boundPath = model._path;
+    var currentCachePosition = cache;
+    var optimizedPath, optimizedLength = boundPath.length;
+    var i, len;
+    var requestedPath = [];
+
+    // If the model is bound, then get that cache position.
+    if (optimizedLength) {
+
+        // JSONGraph output cannot ever be bound or else it will
+        // throw an error.
+        if (isJSONG) {
+            return {
+                criticalError: new BoundJSONGraphModelError()
+            };
+        }
+        currentCachePosition = getCachePosition(model, boundPath);
+
+        // If there was a short, then we 'throw an error' to the outside
+        // calling function which will onError the observer.
+        if (currentCachePosition.$type) {
+            return {
+                criticalError: new InvalidModelError(boundPath, boundPath)
+            };
+        }
+
+        // We need to get the new cache position and copy the bound
+        // path.
+        optimizedPath = [];
+        for (i = 0; i &lt; optimizedLength; ++i) {
+            optimizedPath[i] = boundPath[i];
+        }
+    }
+
+    // Update the optimized path if we
+    else {
+        optimizedPath = [];
+        optimizedLength = 0;
+    }
+
+    for (i = 0, len = paths.length; i &lt; len; i++) {
+        walk(model, cache, currentCachePosition, paths[i], 0,
+             valueNode, results, requestedPath, optimizedPath,
+             optimizedLength, isJSONG);
+    }
+    return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._getPathValuesAsPathMap" id="apidoc.element.falcor.Model.prototype._getPathValuesAsPathMap">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getPathValuesAsPathMap
+        <span class="apidocSignatureSpan">(model, paths, seed)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function innerGet(model, paths, seed) {
+    var valueNode = seed[0];
+    var results = {
+        values: seed,
+        optimizedPaths: []
+    };
+    var cache = model._root.cache;
+    var boundPath = model._path;
+    var currentCachePosition = cache;
+    var optimizedPath, optimizedLength = boundPath.length;
+    var i, len;
+    var requestedPath = [];
+
+    // If the model is bound, then get that cache position.
+    if (optimizedLength) {
+
+        // JSONGraph output cannot ever be bound or else it will
+        // throw an error.
+        if (isJSONG) {
+            return {
+                criticalError: new BoundJSONGraphModelError()
+            };
+        }
+        currentCachePosition = getCachePosition(model, boundPath);
+
+        // If there was a short, then we 'throw an error' to the outside
+        // calling function which will onError the observer.
+        if (currentCachePosition.$type) {
+            return {
+                criticalError: new InvalidModelError(boundPath, boundPath)
+            };
+        }
+
+        // We need to get the new cache position and copy the bound
+        // path.
+        optimizedPath = [];
+        for (i = 0; i &lt; optimizedLength; ++i) {
+            optimizedPath[i] = boundPath[i];
+        }
+    }
+
+    // Update the optimized path if we
+    else {
+        optimizedPath = [];
+        optimizedLength = 0;
+    }
+
+    for (i = 0, len = paths.length; i &lt; len; i++) {
+        walk(model, cache, currentCachePosition, paths[i], 0,
+             valueNode, results, requestedPath, optimizedPath,
+             optimizedLength, isJSONG);
+    }
+    return results;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._getValueSync" id="apidoc.element.falcor.Model.prototype._getValueSync">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getValueSync
+        <span class="apidocSignatureSpan">(model, simplePath, noClone)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getValueSync(model, simplePath, noClone) {
+    var root = model._root.cache;
+    var len = simplePath.length;
+    var optimizedPath = [];
+    var shorted = false, shouldShort = false;
+    var depth = 0;
+    var key, i, next = root, curr = root, out = root, type, ref, refNode;
+    var found = true;
+    var expired = false;
+
+    while (next &amp;&amp; depth &lt; len) {
+        key = simplePath[depth++];
+        if (key !== null) {
+            next = curr[key];
+            optimizedPath[optimizedPath.length] = key;
+        }
+
+        if (!next) {
+            out = undefined;
+            shorted = true;
+            found = false;
+            break;
+        }
+
+        type = next.$type;
+
+        // A materialized item.  There is nothing to deref to.
+        if (type === $atom &amp;&amp; next.value === undefined) {
+            out = undefined;
+            found = false;
+            shorted = depth &lt; len;
+            break;
+        }
+
+        // Up to the last key we follow references, ensure that they are not
+        // expired either.
+        if (depth &lt; len) {
+            if (type === $ref) {
+
+                // If the reference is expired then we need to set expired to
+                // true.
+                if (isExpired(next)) {
+                    expired = true;
+                    out = undefined;
+                    found = false;
+                    break;
+                }
+
+                ref = followReference(model, root, root, next, next.value);
+                refNode = ref[0];
+
+                // The next node is also set to undefined because nothing
+                // could be found, this reference points to nothing, so
+                // nothing must be returned.
+                if (!refNode) {
+                    out = void 0;
+                    next = void 0;
+                    found = false;
+                    break;
+                }
+                type = refNode.$type;
+                next = refNode;
+                optimizedPath = ref[1].slice(0);
+            }
+
+            if (type) {
+                break;
+            }
+        }
+        // If there is a value, then we have great success, else, report an undefined.
+        else {
+            out = next;
+        }
+        curr = next;
+    }
+
+    if (depth &lt; len &amp;&amp; !expired) {
+        // Unfortunately, if all that follows are nulls, then we have not shorted.
+        for (i = depth; i &lt; len; ++i) {
+            if (simplePath[depth] !== null) {
+                shouldShort = true;
+                break;
+            }
+        }
+        // if we should short or report value.  Values are reported on nulls.
+        if (shouldShort) {
+            shorted = true;
+            out = void 0;
+        } else {
+            out = next;
+        }
+
+        for (i = depth; i &lt; len; ++i) {
+            if (simplePath[i] !== null) {
+                optimizedPath[optimizedPath.length] = simplePath[i];
+            }
+        }
+    }
+
+    // promotes if not expired
+    if (out &amp;&amp; type) {
+        if (isExpired(out)) {
+            out = void 0;
+        } else {
+            promote(model, out);
+        }
+    }
+
+    // if (out &amp;&amp; out.$type === $error &amp;&amp; !model._treatErrorsAsValues) {
+    if (out &amp;&amp; type === $error &amp;&amp; !model._treatErrorsAsValues) {
+        throw {
+            path: depth === len ? simplePath : simplePath.slice(0, depth),
+            value: out.value
+        };
+    } else if (out &amp;&amp; model._boxed) {
+        out = Boolean(type) &amp;&amp; !noClone ? clone(out) : out;
+    } else if (!out &amp;&amp; model._materialized) {
+        out = {$type: $atom};
+    } else if (out) {
+        out = out.value;
+    }
+
+    return {
+        value: out,
+        shorted: shorted,
+        optimizedPath: optimizedPath,
+        found: found
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._getVersion" id="apidoc.element.falcor.Model.prototype._getVersion">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getVersion
+        <span class="apidocSignatureSpan">(model, path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getVersion(model, path) {
+    // ultra fast clone for boxed values.
+    var gen = model._getValueSync({
+        _boxed: true,
+        _root: model._root,
+        _treatErrorsAsValues: model._treatErrorsAsValues
+    }, path, true).value;
+    var version = gen &amp;&amp; gen[__version];
+    return (version == null) ? -1 : version;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._getWithPaths" id="apidoc.element.falcor.Model.prototype._getWithPaths">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_getWithPaths
+        <span class="apidocSignatureSpan">(paths)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getWithPaths(paths) {
+    return new GetResponse(this, paths);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._invalidatePathMapsAsJSON" id="apidoc.element.falcor.Model.prototype._invalidatePathMapsAsJSON">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_invalidatePathMapsAsJSON
+        <span class="apidocSignatureSpan">(model, pathMapEnvelopes)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function invalidatePathMaps(model, pathMapEnvelopes) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var comparator = modelRoot._comparator;
+    var errorSelector = modelRoot._errorSelector;
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var pathMapIndex = -1;
+    var pathMapCount = pathMapEnvelopes.length;
+
+    while (++pathMapIndex &lt; pathMapCount) {
+
+        var pathMapEnvelope = pathMapEnvelopes[pathMapIndex];
+
+        invalidatePathMap(
+            pathMapEnvelope.json, 0, cache, parent, node,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._invalidatePathValuesAsJSON" id="apidoc.element.falcor.Model.prototype._invalidatePathValuesAsJSON">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_invalidatePathValuesAsJSON
+        <span class="apidocSignatureSpan">(model, paths)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function invalidatePathSets(model, paths) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var pathIndex = -1;
+    var pathCount = paths.length;
+
+    while (++pathIndex &lt; pathCount) {
+
+        var path = paths[pathIndex];
+
+        invalidatePathSet(
+            path, 0, cache, parent, node,
+            version, expired, lru
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._materialize" id="apidoc.element.falcor.Model.prototype._materialize">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_materialize
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function materialize() {
+    return this._clone({
+        _materialized: true
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+
+function ModelDataSourceAdapter(model) {
+    this._model = model.<span class="apidocCodeKeywordSpan">_materialize</span>().treatErrorsAsValues();
+}
+
+ModelDataSourceAdapter.prototype.get = function get(pathSets) {
+    return this._model.get.apply(this._model, pathSets)._toJSONG();
+};
+
+ModelDataSourceAdapter.prototype.set = function set(jsongResponse) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._set" id="apidoc.element.falcor.Model.prototype._set">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _set() {
+    var args;
+    var argsIdx = -1;
+    var argsLen = arguments.length;
+    var selector = arguments[argsLen - 1];
+    if (isFunction(selector)) {
+        argsLen = argsLen - 1;
+    } else {
+        selector = void 0;
+    }
+    args = new Array(argsLen);
+    while (++argsIdx &lt; argsLen) {
+        args[argsIdx] = arguments[argsIdx];
+    }
+    return SetResponse.create(this, args, selector);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setCache" id="apidoc.element.falcor.Model.prototype._setCache">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setCache
+        <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPathMaps(model, pathMapEnvelopes, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var optimizedIndex = bound.length;
+    var pathMapIndex = -1;
+    var pathMapCount = pathMapEnvelopes.length;
+
+    while (++pathMapIndex &lt; pathMapCount) {
+
+        var pathMapEnvelope = pathMapEnvelopes[pathMapIndex];
+        var optimizedPath = bound.slice(0);
+        optimizedPath.index = optimizedIndex;
+
+        setPathMap(
+            pathMapEnvelope.json, 0, cache, parent, node,
+            requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setJSONGsAsJSON" id="apidoc.element.falcor.Model.prototype._setJSONGsAsJSON">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setJSONGsAsJSON
+        <span class="apidocSignatureSpan">(model, jsonGraphEnvelopes, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setJSONGraphs(model, jsonGraphEnvelopes, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var cache = modelRoot.cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var optimizedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var jsonGraphEnvelopeIndex = -1;
+    var jsonGraphEnvelopeCount = jsonGraphEnvelopes.length;
+
+    while (++jsonGraphEnvelopeIndex &lt; jsonGraphEnvelopeCount) {
+
+        var jsonGraphEnvelope = jsonGraphEnvelopes[jsonGraphEnvelopeIndex];
+        var paths = jsonGraphEnvelope.paths;
+        var jsonGraph = jsonGraphEnvelope.jsonGraph;
+
+        var pathIndex = -1;
+        var pathCount = paths.length;
+
+        while (++pathIndex &lt; pathCount) {
+
+            var path = paths[pathIndex];
+            optimizedPath.index = 0;
+
+            setJSONGraphPathSet(
+                path, 0,
+                cache, cache, cache,
+                jsonGraph, jsonGraph, jsonGraph,
+                requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+                version, expired, lru, comparator, errorSelector
+            );
+        }
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setJSONGsAsJSONG" id="apidoc.element.falcor.Model.prototype._setJSONGsAsJSONG">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setJSONGsAsJSONG
+        <span class="apidocSignatureSpan">(model, jsonGraphEnvelopes, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setJSONGraphs(model, jsonGraphEnvelopes, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var cache = modelRoot.cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var optimizedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var jsonGraphEnvelopeIndex = -1;
+    var jsonGraphEnvelopeCount = jsonGraphEnvelopes.length;
+
+    while (++jsonGraphEnvelopeIndex &lt; jsonGraphEnvelopeCount) {
+
+        var jsonGraphEnvelope = jsonGraphEnvelopes[jsonGraphEnvelopeIndex];
+        var paths = jsonGraphEnvelope.paths;
+        var jsonGraph = jsonGraphEnvelope.jsonGraph;
+
+        var pathIndex = -1;
+        var pathCount = paths.length;
+
+        while (++pathIndex &lt; pathCount) {
+
+            var path = paths[pathIndex];
+            optimizedPath.index = 0;
+
+            setJSONGraphPathSet(
+                path, 0,
+                cache, cache, cache,
+                jsonGraph, jsonGraph, jsonGraph,
+                requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+                version, expired, lru, comparator, errorSelector
+            );
+        }
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setJSONGsAsPathMap" id="apidoc.element.falcor.Model.prototype._setJSONGsAsPathMap">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setJSONGsAsPathMap
+        <span class="apidocSignatureSpan">(model, jsonGraphEnvelopes, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setJSONGraphs(model, jsonGraphEnvelopes, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var cache = modelRoot.cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var optimizedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var jsonGraphEnvelopeIndex = -1;
+    var jsonGraphEnvelopeCount = jsonGraphEnvelopes.length;
+
+    while (++jsonGraphEnvelopeIndex &lt; jsonGraphEnvelopeCount) {
+
+        var jsonGraphEnvelope = jsonGraphEnvelopes[jsonGraphEnvelopeIndex];
+        var paths = jsonGraphEnvelope.paths;
+        var jsonGraph = jsonGraphEnvelope.jsonGraph;
+
+        var pathIndex = -1;
+        var pathCount = paths.length;
+
+        while (++pathIndex &lt; pathCount) {
+
+            var path = paths[pathIndex];
+            optimizedPath.index = 0;
+
+            setJSONGraphPathSet(
+                path, 0,
+                cache, cache, cache,
+                jsonGraph, jsonGraph, jsonGraph,
+                requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+                version, expired, lru, comparator, errorSelector
+            );
+        }
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setJSONGsAsValues" id="apidoc.element.falcor.Model.prototype._setJSONGsAsValues">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setJSONGsAsValues
+        <span class="apidocSignatureSpan">(model, jsonGraphEnvelopes, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setJSONGraphs(model, jsonGraphEnvelopes, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var cache = modelRoot.cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var optimizedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var jsonGraphEnvelopeIndex = -1;
+    var jsonGraphEnvelopeCount = jsonGraphEnvelopes.length;
+
+    while (++jsonGraphEnvelopeIndex &lt; jsonGraphEnvelopeCount) {
+
+        var jsonGraphEnvelope = jsonGraphEnvelopes[jsonGraphEnvelopeIndex];
+        var paths = jsonGraphEnvelope.paths;
+        var jsonGraph = jsonGraphEnvelope.jsonGraph;
+
+        var pathIndex = -1;
+        var pathCount = paths.length;
+
+        while (++pathIndex &lt; pathCount) {
+
+            var path = paths[pathIndex];
+            optimizedPath.index = 0;
+
+            setJSONGraphPathSet(
+                path, 0,
+                cache, cache, cache,
+                jsonGraph, jsonGraph, jsonGraph,
+                requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+                version, expired, lru, comparator, errorSelector
+            );
+        }
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setPathMapsAsJSON" id="apidoc.element.falcor.Model.prototype._setPathMapsAsJSON">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathMapsAsJSON
+        <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPathMaps(model, pathMapEnvelopes, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var optimizedIndex = bound.length;
+    var pathMapIndex = -1;
+    var pathMapCount = pathMapEnvelopes.length;
+
+    while (++pathMapIndex &lt; pathMapCount) {
+
+        var pathMapEnvelope = pathMapEnvelopes[pathMapIndex];
+        var optimizedPath = bound.slice(0);
+        optimizedPath.index = optimizedIndex;
+
+        setPathMap(
+            pathMapEnvelope.json, 0, cache, parent, node,
+            requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setPathMapsAsJSONG" id="apidoc.element.falcor.Model.prototype._setPathMapsAsJSONG">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathMapsAsJSONG
+        <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPathMaps(model, pathMapEnvelopes, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var optimizedIndex = bound.length;
+    var pathMapIndex = -1;
+    var pathMapCount = pathMapEnvelopes.length;
+
+    while (++pathMapIndex &lt; pathMapCount) {
+
+        var pathMapEnvelope = pathMapEnvelopes[pathMapIndex];
+        var optimizedPath = bound.slice(0);
+        optimizedPath.index = optimizedIndex;
+
+        setPathMap(
+            pathMapEnvelope.json, 0, cache, parent, node,
+            requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setPathMapsAsPathMap" id="apidoc.element.falcor.Model.prototype._setPathMapsAsPathMap">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathMapsAsPathMap
+        <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPathMaps(model, pathMapEnvelopes, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var optimizedIndex = bound.length;
+    var pathMapIndex = -1;
+    var pathMapCount = pathMapEnvelopes.length;
+
+    while (++pathMapIndex &lt; pathMapCount) {
+
+        var pathMapEnvelope = pathMapEnvelopes[pathMapIndex];
+        var optimizedPath = bound.slice(0);
+        optimizedPath.index = optimizedIndex;
+
+        setPathMap(
+            pathMapEnvelope.json, 0, cache, parent, node,
+            requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setPathMapsAsValues" id="apidoc.element.falcor.Model.prototype._setPathMapsAsValues">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathMapsAsValues
+        <span class="apidocSignatureSpan">(model, pathMapEnvelopes, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPathMaps(model, pathMapEnvelopes, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var optimizedIndex = bound.length;
+    var pathMapIndex = -1;
+    var pathMapCount = pathMapEnvelopes.length;
+
+    while (++pathMapIndex &lt; pathMapCount) {
+
+        var pathMapEnvelope = pathMapEnvelopes[pathMapIndex];
+        var optimizedPath = bound.slice(0);
+        optimizedPath.index = optimizedIndex;
+
+        setPathMap(
+            pathMapEnvelope.json, 0, cache, parent, node,
+            requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setPathValuesAsJSON" id="apidoc.element.falcor.Model.prototype._setPathValuesAsJSON">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathValuesAsJSON
+        <span class="apidocSignatureSpan">(model, pathValues, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPathValues(model, pathValues, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var optimizedIndex = bound.length;
+    var pathValueIndex = -1;
+    var pathValueCount = pathValues.length;
+
+    while (++pathValueIndex &lt; pathValueCount) {
+
+        var pathValue = pathValues[pathValueIndex];
+        var path = pathValue.path;
+        var value = pathValue.value;
+        var optimizedPath = bound.slice(0);
+        optimizedPath.index = optimizedIndex;
+
+        setPathSet(
+            value, path, 0, cache, parent, node,
+            requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setPathValuesAsJSONG" id="apidoc.element.falcor.Model.prototype._setPathValuesAsJSONG">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathValuesAsJSONG
+        <span class="apidocSignatureSpan">(model, pathValues, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPathValues(model, pathValues, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var optimizedIndex = bound.length;
+    var pathValueIndex = -1;
+    var pathValueCount = pathValues.length;
+
+    while (++pathValueIndex &lt; pathValueCount) {
+
+        var pathValue = pathValues[pathValueIndex];
+        var path = pathValue.path;
+        var value = pathValue.value;
+        var optimizedPath = bound.slice(0);
+        optimizedPath.index = optimizedIndex;
+
+        setPathSet(
+            value, path, 0, cache, parent, node,
+            requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setPathValuesAsPathMap" id="apidoc.element.falcor.Model.prototype._setPathValuesAsPathMap">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathValuesAsPathMap
+        <span class="apidocSignatureSpan">(model, pathValues, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPathValues(model, pathValues, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var optimizedIndex = bound.length;
+    var pathValueIndex = -1;
+    var pathValueCount = pathValues.length;
+
+    while (++pathValueIndex &lt; pathValueCount) {
+
+        var pathValue = pathValues[pathValueIndex];
+        var path = pathValue.path;
+        var value = pathValue.value;
+        var optimizedPath = bound.slice(0);
+        optimizedPath.index = optimizedIndex;
+
+        setPathSet(
+            value, path, 0, cache, parent, node,
+            requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setPathValuesAsValues" id="apidoc.element.falcor.Model.prototype._setPathValuesAsValues">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setPathValuesAsValues
+        <span class="apidocSignatureSpan">(model, pathValues, x, errorSelector, comparator)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setPathValues(model, pathValues, x, errorSelector, comparator) {
+
+    var modelRoot = model._root;
+    var lru = modelRoot;
+    var expired = modelRoot.expired;
+    var version = incrementVersion();
+    var bound = model._path;
+    var cache = modelRoot.cache;
+    var node = bound.length ? getBoundValue(model, bound).value : cache;
+    var parent = node[__parent] || cache;
+    var initialVersion = cache[__version];
+
+    var requestedPath = [];
+    var requestedPaths = [];
+    var optimizedPaths = [];
+    var optimizedIndex = bound.length;
+    var pathValueIndex = -1;
+    var pathValueCount = pathValues.length;
+
+    while (++pathValueIndex &lt; pathValueCount) {
+
+        var pathValue = pathValues[pathValueIndex];
+        var path = pathValue.path;
+        var value = pathValue.value;
+        var optimizedPath = bound.slice(0);
+        optimizedPath.index = optimizedIndex;
+
+        setPathSet(
+            value, path, 0, cache, parent, node,
+            requestedPaths, optimizedPaths, requestedPath, optimizedPath,
+            version, expired, lru, comparator, errorSelector
+        );
+    }
+
+    var newVersion = cache[__version];
+    var rootChangeHandler = modelRoot.onChange;
+
+    if (isFunction(rootChangeHandler) &amp;&amp; initialVersion !== newVersion) {
+        rootChangeHandler();
+    }
+
+    return [requestedPaths, optimizedPaths];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._setValueSync" id="apidoc.element.falcor.Model.prototype._setValueSync">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_setValueSync
+        <span class="apidocSignatureSpan">(pathArg, valueArg, errorSelectorArg, comparatorArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setValueSync(pathArg, valueArg, errorSelectorArg, comparatorArg) {
+
+    var path = pathSyntax.fromPath(pathArg);
+    var value = valueArg;
+    var errorSelector = errorSelectorArg;
+    var comparator = comparatorArg;
+
+    if (isPathValue(path)) {
+        comparator = errorSelector;
+        errorSelector = value;
+        value = path;
+    } else {
+        value = {
+            path: path,
+            value: value
+        };
+    }
+
+    if (isPathValue(value) === false) {
+        throw new Error("Model#setValueSync must be called with an Array path.");
+    }
+
+    if (typeof errorSelector !== "function") {
+        errorSelector = this._root._errorSelector;
+    }
+
+    if (typeof comparator !== "function") {
+        comparator = this._root._comparator;
+    }
+
+    if (this._syncCheck("setValueSync")) {
+        setPathValues(this, [value]);
+        return this._getValueSync(this, value.path).value;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype._syncCheck" id="apidoc.element.falcor.Model.prototype._syncCheck">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>_syncCheck
+        <span class="apidocSignatureSpan">(name)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function syncCheck(name) {
+    if (Boolean(this._source) &amp;&amp; this._root.syncRefCount &lt;= 0 &amp;&amp; this._root.unsafeMode === false) {
+        throw new Error("Model#" + name + " may only be called within the context of a request selector.");
+    }
+    return true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.asDataSource" id="apidoc.element.falcor.Model.prototype.asDataSource">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>asDataSource
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function asDataSource() {
+    return new ModelDataSourceAdapter(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.batch" id="apidoc.element.falcor.Model.prototype.batch">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>batch
+        <span class="apidocSignatureSpan">(schedulerOrDelayArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function batch(schedulerOrDelayArg) {
+    var schedulerOrDelay = schedulerOrDelayArg;
+    if (typeof schedulerOrDelay === "number") {
+        schedulerOrDelay = new TimeoutScheduler(Math.round(Math.abs(schedulerOrDelay)));
+    } else if (!schedulerOrDelay || !schedulerOrDelay.schedule) {
+        schedulerOrDelay = new ASAPScheduler();
+    }
+    var clone = this._clone();
+    clone._request = new RequestQueue(clone, schedulerOrDelay);
+
+    return clone;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.boxValues" id="apidoc.element.falcor.Model.prototype.boxValues">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>boxValues
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function boxValues() {
+    return this._clone({
+        _boxed: true
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.call" id="apidoc.element.falcor.Model.prototype.call">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>call
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function call() {
+    var args;
+    var argsIdx = -1;
+    var argsLen = arguments.length;
+    args = new Array(argsLen);
+    while (++argsIdx &lt; argsLen) {
+        var arg = arguments[argsIdx];
+        args[argsIdx] = arg;
+        var argType = typeof arg;
+        if (argsIdx &gt; 1 &amp;&amp; !Array.isArray(arg) ||
+            argsIdx === 0 &amp;&amp; !Array.isArray(arg) &amp;&amp; argType !== "string" ||
+            argsIdx === 1 &amp;&amp; !Array.isArray(arg) &amp;&amp; !isPrimitive(arg)) {
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-loop-func */
+</span>            return new ModelResponse(function(o) {
+                o.onError(new Error("Invalid argument"));
+            });
+            /* eslint-enable no-loop-func */
+        }
+    }
+
+    return CallResponse.create(this, args);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.deref" id="apidoc.element.falcor.Model.prototype.deref">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>deref
+        <span class="apidocSignatureSpan">(boundPathArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function deref(boundPathArg) {
+
+    var model = this;
+    var pathsIndex = -1;
+    var pathsCount = arguments.length - 1;
+    var paths = new Array(pathsCount);
+
+    var boundPath = pathSyntax.fromPath(boundPathArg);
+
+    while (++pathsIndex &lt; pathsCount) {
+        paths[pathsIndex] = pathSyntax.fromPath(arguments[pathsIndex + 1]);
+    }
+
+    if (pathsCount === 0) {
+        throw new Error("Model#deref requires at least one value path.");
+    }
+
+    return Rx.Observable.defer(function() {
+        return derefSync(model, boundPath);
+    }).
+    flatMap(function(boundModel) {
+        if (Boolean(boundModel)) {
+            if (pathsCount &gt; 0) {
+                var ofBoundModel = Rx.Observable.of(boundModel);
+
+                // Ensures that all the leaves are in the cache.
+                return boundModel.get.
+                    apply(boundModel, paths).
+
+                    // Ensures that if only errors occur, then the concat
+                    // will still run.
+                    catch(Rx.Observable.empty()).
+
+                    // Ensures that the last thing returned by this operation is
+                    // the bound model.
+                    concat(ofBoundModel).
+
+                    // Plucks the last value from this stream, which should be
+                    // the bound model.
+                    last().
+
+                    // Chooses the new deref or passes on the invalid model
+                    // error.
+                    flatMap(function getNextBoundModel() {
+
+                        // TODO: Should we onError the error from derefSync?
+                        return derefSync(model, boundPath);
+                    }).
+
+                    // The previous operation can undefine the cache, so we need
+                    // to ensure that we don't return and undefined model.
+                    filter(function(x) { return x; });
+            }
+            return Rx.Observable.return(boundModel);
+        } else if (pathsCount &gt; 0) {
+            var modifiedPaths = paths.map(function(path) {
+                return boundPath.concat(path);
+            });
+
+            // Fill the cache with the request.
+            return model.
+                get.apply(model, modifiedPaths).
+
+                // We concat the deref sync operation afterwords.
+                // Any errors will be forwarded onto the caller.
+                concat(Rx.Observable.defer(function() {
+                    return derefSync(model, boundPath);
+                })).
+                last().
+
+                // 'x' has to exist.  Cannot be falsy.  Must be model.
+                filter(function(x) { return x; });
+        }
+        return Rx.Observable.empty();
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.get" id="apidoc.element.falcor.Model.prototype.get">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>get
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get() {
+    // Validates the input.  If the input is not pathSets or strings then we
+    // will onError.
+    var out = validateInput(arguments, GET_VALID_INPUT, "get");
+    if (out !== true) {
+        return new ModelResponse(function(o) {
+            o.onError(out);
+        });
+    }
+
+    var paths = pathSyntax.fromPathsOrPathValues(arguments);
+    return new GetResponse(this, paths);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* A HttpDataSource object is a {@link DataSource} can be used to retrieve data from a remote JSONGraph object using the browser&amp;#
+x27;s XMLHttpRequest.
+* @constructor HttpDataSource
+* @augments DataSource
+* @param jsonGraphUrl the URL of the JSONGraph model.
+* @example
+var model = new falcor.Model({source: new falcor.HttpDataSource("http://netflix.com/user.json")});
+var movieNames = model.<span class="apidocCodeKeywordSpan">get</span>('genreLists[0...10][0...10].name').toPathValues();
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.getCache" id="apidoc.element.falcor.Model.prototype.getCache">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>getCache
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function _getCache() {
+    var paths = arraySlice(arguments);
+    if (paths.length === 0) {
+        return getCache(this._root.cache);
+    }
+
+    var result = [{}];
+    var path = this._path;
+    get.getWithPathsAsJSONGraph(this, paths, result);
+    this._path = path;
+    return result[0].jsonGraph;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.getPath" id="apidoc.element.falcor.Model.prototype.getPath">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>getPath
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPath() {
+    return arrayClone(this._path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.getValue" id="apidoc.element.falcor.Model.prototype.getValue">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>getValue
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getValue(path) {
+    var parsedPath = pathSyntax.fromPath(path);
+    var pathIdx = 0;
+    var pathLen = parsedPath.length;
+    while (++pathIdx &lt; pathLen) {
+        if (typeof parsedPath[pathIdx] === "object") {
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-loop-func */
+</span>            return new ModelResponse(function(o) {
+                o.onError(new Error("Paths must be simple paths"));
+            });
+            /* eslint-enable no-loop-func */
+        }
+    }
+
+    var self = this;
+    return new ModelResponse(function(obs) {
+        return self.get(parsedPath).subscribe(function(data) {
+            var curr = data.json;
+            var depth = -1;
+            var length = parsedPath.length;
+
+            while (curr &amp;&amp; ++depth &lt; length) {
+                curr = curr[parsedPath[depth]];
+            }
+            obs.onNext(curr);
+        }, function(err) {
+            obs.onError(err);
+        }, function() {
+            obs.onCompleted();
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.getVersion" id="apidoc.element.falcor.Model.prototype.getVersion">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>getVersion
+        <span class="apidocSignatureSpan">(pathArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getVersion(pathArg) {
+    var path = pathArg &amp;&amp; pathSyntax.fromPath(pathArg) || [];
+    if (Array.isArray(path) === false) {
+        throw new Error("Model#getVersion must be called with an Array path.");
+    }
+    if (this._path.length) {
+        path = this._path.concat(path);
+    }
+    return this._getVersion(this, path);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.invalidate" id="apidoc.element.falcor.Model.prototype.invalidate">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>invalidate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function invalidate() {
+    var args;
+    var argsIdx = -1;
+    var argsLen = arguments.length;
+    var selector = arguments[argsLen - 1];
+    args = new Array(argsLen);
+    while (++argsIdx &lt; argsLen) {
+        args[argsIdx] = pathSyntax.fromPath(arguments[argsIdx]);
+        if (typeof args[argsIdx] !== "object") {
+            throw new Error("Invalid argument");
+        }
+    }
+
+    // creates the obs, subscribes and will throw the errors if encountered.
+    InvalidateResponse.
+        create(this, args, selector).
+        subscribe(noOp, function(e) {
+            throw e;
+        });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.preload" id="apidoc.element.falcor.Model.prototype.preload">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>preload
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function preload() {
+    var out = validateInput(arguments, GET_VALID_INPUT, "preload");
+    if (out !== true) {
+        return new ModelResponse(function(o) {
+            o.onError(out);
+        });
+    }
+    var args = Array.prototype.slice.call(arguments);
+    var self = this;
+    return new ModelResponse(function(obs) {
+        return self.get.apply(self, args).subscribe(function() {
+        }, function(err) {
+            obs.onError(err);
+        }, function() {
+            obs.onCompleted();
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.set" id="apidoc.element.falcor.Model.prototype.set">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>set
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set() {
+    var out = validateInput(arguments, SET_VALID_INPUT, "set");
+    if (out !== true) {
+        return new ModelResponse(function(o) {
+            o.onError(out);
+        });
+    }
+    return this._set.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+ModelDataSourceAdapter.prototype.get = function get(pathSets) {
+    return this._model.get.apply(this._model, pathSets)._toJSONG();
+};
+
+ModelDataSourceAdapter.prototype.set = function set(jsongResponse) {
+    return this._model.<span class="apidocCodeKeywordSpan">set</span>(jsongResponse)._toJSONG();
+};
+
+ModelDataSourceAdapter.prototype.call = function call(path, args, suffixes, paths) {
+    var params = [path, args, suffixes].concat(paths);
+    return this._model.call.apply(this._model, params)._toJSONG();
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.setCache" id="apidoc.element.falcor.Model.prototype.setCache">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>setCache
+        <span class="apidocSignatureSpan">(cacheOrJSONGraphEnvelope)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function modelSetCache(cacheOrJSONGraphEnvelope) {
+    var cache = this._root.cache;
+    if (cacheOrJSONGraphEnvelope !== cache) {
+        var modelRoot = this._root;
+        var boundPath = this._path;
+        this._path = [];
+        this._root.cache = {};
+        if (typeof cache !== "undefined") {
+            collectLru(modelRoot, modelRoot.expired, getSize(cache), 0);
+        }
+        if (isJSONGraphEnvelope(cacheOrJSONGraphEnvelope)) {
+            setJSONGraphs(this, [cacheOrJSONGraphEnvelope]);
+        } else if (isJSONEnvelope(cacheOrJSONGraphEnvelope)) {
+            setCache(this, [cacheOrJSONGraphEnvelope]);
+        } else if (isObject(cacheOrJSONGraphEnvelope)) {
+            setCache(this, [{ json: cacheOrJSONGraphEnvelope }]);
+        }
+        this._path = boundPath;
+    } else if (typeof cache === "undefined") {
+        this._root.cache = {};
+    }
+    return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.setValue" id="apidoc.element.falcor.Model.prototype.setValue">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>setValue
+        <span class="apidocSignatureSpan">(pathArg, valueArg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function setValue(pathArg, valueArg) {
+    var value = isPathValue(pathArg) ? pathArg : jsong.pathValue(pathArg, valueArg);
+    var pathIdx = 0;
+    var path = value.path;
+    var pathLen = path.length;
+    while (++pathIdx &lt; pathLen) {
+        if (typeof path[pathIdx] === "object") {
+<span class="apidocCodeCommentSpan">            /* eslint-disable no-loop-func */
+</span>            return new ModelResponse(function(o) {
+                o.onError(new Error("Paths must be simple paths"));
+            });
+            /* eslint-enable no-loop-func */
+        }
+    }
+    var self = this;
+    return new ModelResponse(function(obs) {
+        return self._set(value).subscribe(function(data) {
+            var curr = data.json;
+            var depth = -1;
+            var length = path.length;
+
+            while (curr &amp;&amp; ++depth &lt; length) {
+                curr = curr[path[depth]];
+            }
+            obs.onNext(curr);
+        }, function(err) {
+            obs.onError(err);
+        }, function() {
+            obs.onCompleted();
+        });
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.toJSON" id="apidoc.element.falcor.Model.prototype.toJSON">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>toJSON
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toJSON() {
+    return {
+        $type: "ref",
+        value: this._path
+    };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.treatErrorsAsValues" id="apidoc.element.falcor.Model.prototype.treatErrorsAsValues">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>treatErrorsAsValues
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function treatErrorsAsValues() {
+    return this._clone({
+        _treatErrorsAsValues: true
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+
+
+
+
+function ModelDataSourceAdapter(model) {
+    this._model = model._materialize().<span class="apidocCodeKeywordSpan">treatErrorsAsValues</span>();
+}
+
+ModelDataSourceAdapter.prototype.get = function get(pathSets) {
+    return this._model.get.apply(this._model, pathSets)._toJSONG();
+};
+
+ModelDataSourceAdapter.prototype.set = function set(jsongResponse) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.unbatch" id="apidoc.element.falcor.Model.prototype.unbatch">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>unbatch
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unbatch() {
+    var clone = this._clone();
+    clone._request = new RequestQueue(clone, new ImmediateScheduler());
+    return clone;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.unboxValues" id="apidoc.element.falcor.Model.prototype.unboxValues">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>unboxValues
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function unboxValues() {
+    return this._clone({
+        _boxed: "delete"
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.Model.prototype.withoutDataSource" id="apidoc.element.falcor.Model.prototype.withoutDataSource">
+        function <span class="apidocSignatureSpan">falcor.Model.prototype.</span>withoutDataSource
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function withoutDataSource() {
+    return this._clone({
+        _source: "delete"
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.falcor.ModelDataSourceAdapter" id="apidoc.module.falcor.ModelDataSourceAdapter">module falcor.ModelDataSourceAdapter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.ModelDataSourceAdapter.ModelDataSourceAdapter" id="apidoc.element.falcor.ModelDataSourceAdapter.ModelDataSourceAdapter">
+        function <span class="apidocSignatureSpan">falcor.</span>ModelDataSourceAdapter
+        <span class="apidocSignatureSpan">(model)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ModelDataSourceAdapter(model) {
+    this._model = model._materialize().treatErrorsAsValues();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.falcor.ModelDataSourceAdapter.prototype" id="apidoc.module.falcor.ModelDataSourceAdapter.prototype">module falcor.ModelDataSourceAdapter.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.ModelDataSourceAdapter.prototype.call" id="apidoc.element.falcor.ModelDataSourceAdapter.prototype.call">
+        function <span class="apidocSignatureSpan">falcor.ModelDataSourceAdapter.prototype.</span>call
+        <span class="apidocSignatureSpan">(path, args, suffixes, paths)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function call(path, args, suffixes, paths) {
+    var params = [path, args, suffixes].concat(paths);
+    return this._model.call.apply(this._model, params)._toJSONG();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.ModelDataSourceAdapter.prototype.get" id="apidoc.element.falcor.ModelDataSourceAdapter.prototype.get">
+        function <span class="apidocSignatureSpan">falcor.ModelDataSourceAdapter.prototype.</span>get
+        <span class="apidocSignatureSpan">(pathSets)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function get(pathSets) {
+    return this._model.get.apply(this._model, pathSets)._toJSONG();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+/**
+* A HttpDataSource object is a {@link DataSource} can be used to retrieve data from a remote JSONGraph object using the browser&amp;#
+x27;s XMLHttpRequest.
+* @constructor HttpDataSource
+* @augments DataSource
+* @param jsonGraphUrl the URL of the JSONGraph model.
+* @example
+var model = new falcor.Model({source: new falcor.HttpDataSource("http://netflix.com/user.json")});
+var movieNames = model.<span class="apidocCodeKeywordSpan">get</span>('genreLists[0...10][0...10].name').toPathValues();
+*/
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.ModelDataSourceAdapter.prototype.set" id="apidoc.element.falcor.ModelDataSourceAdapter.prototype.set">
+        function <span class="apidocSignatureSpan">falcor.ModelDataSourceAdapter.prototype.</span>set
+        <span class="apidocSignatureSpan">(jsongResponse)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function set(jsongResponse) {
+    return this._model.set(jsongResponse)._toJSONG();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+ModelDataSourceAdapter.prototype.get = function get(pathSets) {
+    return this._model.get.apply(this._model, pathSets)._toJSONG();
+};
+
+ModelDataSourceAdapter.prototype.set = function set(jsongResponse) {
+    return this._model.<span class="apidocCodeKeywordSpan">set</span>(jsongResponse)._toJSONG();
+};
+
+ModelDataSourceAdapter.prototype.call = function call(path, args, suffixes, paths) {
+    var params = [path, args, suffixes].concat(paths);
+    return this._model.call.apply(this._model, params)._toJSONG();
+};
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.falcor.ModelRoot" id="apidoc.module.falcor.ModelRoot">module falcor.ModelRoot</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.ModelRoot.ModelRoot" id="apidoc.element.falcor.ModelRoot.ModelRoot">
+        function <span class="apidocSignatureSpan">falcor.</span>ModelRoot
+        <span class="apidocSignatureSpan">(o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ModelRoot(o) {
+
+    var options = o || {};
+
+    this.syncRefCount = 0;
+    this.expired = options.expired || [];
+    this.unsafeMode = options.unsafeMode || false;
+    this.collectionScheduler = options.collectionScheduler || new ImmediateScheduler();
+    this.cache = {};
+
+    if (isFunction(options.comparator)) {
+        this.comparator = options.comparator;
+    }
+
+    if (isFunction(options.errorSelector)) {
+        this.errorSelector = options.errorSelector;
+    }
+
+    if (isFunction(options.onChange)) {
+        this.onChange = options.onChange;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.falcor.ModelRoot.prototype" id="apidoc.module.falcor.ModelRoot.prototype">module falcor.ModelRoot.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.ModelRoot.prototype.comparator" id="apidoc.element.falcor.ModelRoot.prototype.comparator">
+        function <span class="apidocSignatureSpan">falcor.ModelRoot.prototype.</span>comparator
+        <span class="apidocSignatureSpan">(cacheNode, messageNode)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function comparator(cacheNode, messageNode) {
+    if (hasOwn(cacheNode, "value") &amp;&amp; hasOwn(messageNode, "value")) {
+        // They are the same only if the following fields are the same.
+        return cacheNode.value === messageNode.value &amp;&amp;
+            cacheNode.$type === messageNode.$type &amp;&amp;
+            cacheNode.$expires === messageNode.$expires;
+    }
+    return cacheNode === messageNode;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.falcor.ModelRoot.prototype.errorSelector" id="apidoc.element.falcor.ModelRoot.prototype.errorSelector">
+        function <span class="apidocSignatureSpan">falcor.ModelRoot.prototype.</span>errorSelector
+        <span class="apidocSignatureSpan">(x, y)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function errorSelector(x, y) {
+    return y;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
